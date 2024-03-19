@@ -7,8 +7,8 @@
 - CUDA 12.1
 
 ```bash
-# matplotlib numpy opencv-python
-pip install matplotlib numpy opencv-python
+# matplotlib numpy opencv-python pillow
+pip install matplotlib numpy opencv-python pillow
 # pytorch
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu121
 ```
@@ -30,4 +30,5 @@ python -c "import os; print('\\'.join(os.sys.path[1].split('\\')[:-1]))"
 code PYTHON_PATH\Lib\site-packages\youtube_dl\extractor\youtube.py
 ```
 
-- pafy ([source](https://github.com/Cupcakus/pafy))
+- youtube-dl 2021.12.17
+- pafy 0.5.5 ([source](https://github.com/Cupcakus/pafy))
