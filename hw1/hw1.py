@@ -10,9 +10,7 @@ from torchvision.transforms import v2
 def cv2ImgAddText(img, text, pos, text_color=(0, 255, 0), text_size=20):
     img = Image.fromarray(cv2.cvtColor(img, cv2.COLOR_BGR2RGB))
     draw = ImageDraw.Draw(img)
-    font_text = ImageFont.truetype(
-        "C:\\Windows\\Fonts\\msjh.ttc", text_size, encoding="utf-8"
-    )
+    font_text = ImageFont.truetype("..\\fonts\\msjh.ttc", text_size, encoding="utf-8")
     draw.text(pos, text, text_color, font=font_text)
     return cv2.cvtColor(np.asarray(img), cv2.COLOR_RGB2BGR)
 
