@@ -23,7 +23,7 @@ origin = cv2.VideoCapture(name)
 videos.append((origin, name))
 
 # get 聖稜-雪山的脊樑©
-name = "聖稜-雪山的脊樑©"
+name = "Youtube 聖稜-雪山的脊樑©"
 URL = "https://youtu.be/PHqhEgkGfrs"
 origin = cv2.VideoCapture(pafy.new(URL, False, False).getbest(preftype="mp4").url)
 videos.append((origin, name))
