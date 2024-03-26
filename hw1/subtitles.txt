@@ -1,0 +1,14 @@
+作業一展示影片，影片全由 python 程式產生，沒有進行後製
+影像使用 pafy, pyttsx3, MoviePy, Pillow, NumPy, openCV 和 Pytorch 處理
+展示開始
+左上方視訊為原始的測試影片
+左下是以 pytorch Gaussian Blur 卷積運算的結果
+水面上的噪點有明顯的被模糊消除
+中上的視訊為轉換至 HSV 色彩空間的結果
+因為是用 BGR 色彩空間顯示，視訊顯得怪異
+中下是以 NumPy 進行 Gamma Correction 的結果
+視訊變得更加清晰明亮，凸顯更多後方建築物的細節
+右上則是 Youtube 聖稜-雪山的脊樑 的原始視訊
+右下是將 HSV 色彩空間的 V 通道質方圖等化的結果
+視訊明暗對比有所提升
+展示結束，謝謝觀看
