@@ -29,7 +29,7 @@ SOURCE_NAME = "result_video.avi"
 BGM_NAME = "background_music.wav"
 TARGET_NAME = "demo_video.mp4"
 
-FONT = "msjh.ttc"
+FONT = "msjhbd.ttc"
 SUBTITLES = ""
 with open("subtitles.txt", "r", encoding="utf-8") as f:
     SUBTITLES = f.read()
