@@ -14,4 +14,4 @@ Use some Python libraries, such as `pyttsx3` and `MoviePy`, to automatically add
 
 ## Demo
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/CklXGiZxqOs?si=UAvtvoap7HQwi5Lw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+Watch on [Youtube](https://youtu.be/CklXGiZxqOs).
