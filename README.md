@@ -32,3 +32,17 @@ code PYTHON_PATH\Lib\site-packages\youtube_dl\extractor\youtube.py
 
 - youtube-dl 2021.12.17
 - pafy 0.5.5 ([source](https://github.com/Cupcakus/pafy))
+
+### for demo video
+
+```bash
+# pyttsx3 moviepy
+pip install pyttsx3 moviepy
+```
+
+Install [ImageMagick](https://www.imagemagick.org/script/download.php) and go into the `moviepy/config_defaults.py` file and provide the path to the ImageMagick binary called magick.
+([MoviePy - Download and Installation](https://zulko.github.io/moviepy/install.html#other-optional-but-useful-dependencies))
+
+```py
+IMAGEMAGICK_BINARY = "C:\\Program Files\\ImageMagick_VERSION\\magick.exe"
+```
