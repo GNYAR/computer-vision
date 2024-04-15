@@ -76,7 +76,3 @@ def build_model():
 ![Version 2 model](example_img/model_2.png)
 
 ![Version 2 result](example_img/result_2.png)
-
-## Demo
-
-Watch on [Youtube](https://youtu.be).
