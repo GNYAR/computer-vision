@@ -136,7 +136,7 @@ def read_src_videos():
 
 # output video
 out = cv2.VideoWriter(
-    "result.avi",
+    "result_video.avi",
     cv2.VideoWriter.fourcc(*"XVID"),
     24.0,
     FRAME_SIZE,
