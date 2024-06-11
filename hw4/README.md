@@ -14,7 +14,7 @@ The CCSN data set is available at https://www.kaggle.com/datasets/mmichelli/cirr
 
 ## Requirements:
 
-In this homework,train at least 3 deep NNs for [the CCSN data set](https://www.kaggle.com/datasets/mmichelli/cirrus-cumulus-stratus-nimbus-ccsn-database).
+In this homework, train at least 3 deep NNs for [the CCSN data set](https://www.kaggle.com/datasets/mmichelli/cirrus-cumulus-stratus-nimbus-ccsn-database).
 
 - **Build two deep NNs on two pretrained models.**
 

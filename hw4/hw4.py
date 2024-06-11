@@ -1,28 +1,22 @@
-import glob
-import os
-import time
-
 from matplotlib import pyplot as plt
 import numpy as np
-from PIL import Image
 from sklearn.model_selection import StratifiedKFold
 from sklearn.model_selection import train_test_split
 import torch
 from torch import nn
 from torch import optim
-from torch.optim import lr_scheduler
-from torch.backends import cudnn
 from torchvision import transforms
 
 from dataset import ImageDataset
 from dataset import get_paths_labels_classes
-from training import build_resnet
+from training import build_efficientnet
+from training import build_vit
+from training import build_mynet
 from training import evaluate
 from training import train_model
 
 DATASET_PATH = "D:\\CCSN_v2"
 paths, labels, classes = get_paths_labels_classes(DATASET_PATH)
-# dataset = ImageDataset(paths, labels)
 
 device = torch.device("cpu")
 if torch.cuda.is_available():
@@ -99,14 +93,15 @@ for i, (train_idx, test_idx) in enumerate(skf.split(paths, labels)):
         batch_size=batch_size,
         shuffle=True,
     )
-
-    resnet = build_resnet(len(classes), True)
-    resnet = resnet.to(device)
+    # net = build_efficientnet(len(classes), True)
+    # net = build_vit(len(classes), True)
+    net = build_mynet(len(classes), True)
+    net = net.to(device)
     # Observe that all parameters are being optimized
-    optimizer_ft = optim.Adam(resnet.parameters())
+    optimizer_ft = optim.Adam(net.parameters())
 
     trained_model, history = train_model(
-        resnet,
+        net,
         criterion,
         optimizer_ft,
         dataloaders={"train": trainloader, "validate": validloader},

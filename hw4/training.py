@@ -5,6 +5,22 @@ import time
 import torch
 import torchvision
 
+from my_net import MyNet
+
+
+def build_efficientnet(class_number, trainable=True):
+    efficientnet = torchvision.models.efficientnet_b3(
+        weights=torchvision.models.EfficientNet_B3_Weights.DEFAULT
+    )
+
+    for param in efficientnet.parameters():
+        param.requires_grad = trainable
+
+    num_ftrs = efficientnet.classifier[1].in_features
+    efficientnet.classifier[1] = torch.nn.Linear(num_ftrs, class_number)
+
+    return efficientnet
+
 
 def build_resnet(class_number, trainable=True):
     resnet = torchvision.models.resnet50(
@@ -19,6 +35,31 @@ def build_resnet(class_number, trainable=True):
     resnet.fc = torch.nn.Linear(num_ftrs, class_number)
 
     return resnet
+
+
+def build_vit(class_number, trainable=True):
+    vit = torchvision.models.vit_b_32(
+        weights=torchvision.models.ViT_B_32_Weights.DEFAULT
+    )
+
+    for param in vit.parameters():
+        param.requires_grad = trainable
+
+    num_ftrs = vit.heads[-1].in_features
+    vit.heads[-1] = torch.nn.Linear(num_ftrs, class_number)
+
+    return vit
+
+
+def build_mynet(class_number, trainable=True):
+    mynet = MyNet(
+        growth_rate=4, num_blocks=2, num_layers_per_block=4, num_classes=class_number
+    )
+
+    for param in mynet.parameters():
+        param.requires_grad = trainable
+
+    return mynet
 
 
 def evaluate(model, criterion, dataloader):
