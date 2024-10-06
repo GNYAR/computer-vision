@@ -1,5 +1,7 @@
 # computer-vision
 
+Practices from computer vision class.
+
 ## Environment
 
 - Windows 10
